@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { JsonLd } from "@/components/ui";
 import { PencilDefs } from "@/components/Doodle";
+import MarginDoodles, { CharcoalDefs } from "@/components/MarginDoodles";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -75,12 +76,15 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html lang="en-NZ" className="h-full antialiased">
       <body className="flex min-h-full flex-col">
         <PencilDefs />
+        <CharcoalDefs />
         <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-50 focus:rounded focus:bg-white focus:px-4 focus:py-2">
           Skip to content
         </a>
         <Header />
-        <main id="main" className="flex-1">
-          {children}
+        <main id="main" className="relative flex-1">
+          <MarginDoodles side="left" />
+          <MarginDoodles side="right" />
+          <div className="relative z-10">{children}</div>
         </main>
         <Footer />
         <JsonLd data={orgSchema} />

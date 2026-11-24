@@ -17,8 +17,7 @@ export default function Home() {
       {/* Hero */}
       <section className="relative overflow-hidden border-b border-rule">
         <div aria-hidden className="absolute -top-20 -right-20 h-40 w-40 rounded-full bg-blue md:-top-24 md:-right-24 md:h-[28rem] md:w-[28rem]" />
-        <Doodle name="spiral" className="absolute top-1/2 left-4 hidden h-24 w-24 -translate-y-1/2 text-graphite 2xl:block" />
-        <div className="absolute top-80 right-10 hidden w-56 text-graphite lg:block md:top-[29rem]">
+        <div className="absolute top-80 right-10 hidden w-56 text-graphite lg:block md:top-[29rem] xl:right-[calc((100vw-72rem)/2+2.5rem)]">
           <Doodle name="arrow" className="h-20 w-28 -scale-x-100 rotate-[-20deg]" />
           <Note className="mt-1 -rotate-3">psst... AI reads this too</Note>
         </div>

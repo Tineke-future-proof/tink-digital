@@ -49,7 +49,7 @@ export function PageHero({
 }) {
   return (
     <section className="relative border-b border-rule pt-16 pb-14 md:pt-24 md:pb-20">
-      <div className="absolute top-20 right-8 hidden w-60 flex-col items-center text-graphite lg:flex xl:right-20">
+      <div className="absolute top-20 right-8 hidden w-60 flex-col items-center text-graphite lg:flex xl:right-[calc((100vw-72rem)/2+3rem)]">
         <Doodle name={doodle} className="h-28 w-36 text-blue" />
         {note && <Note className="mt-3 -rotate-3 text-center">{note}</Note>}
       </div>
