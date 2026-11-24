@@ -18,7 +18,7 @@ export default function Home() {
       <section className="relative overflow-hidden border-b border-rule">
         <div className="absolute top-80 right-10 hidden w-56 text-graphite lg:block md:top-[29rem] xl:right-[calc((100vw-72rem)/2+2.5rem)]">
           <Doodle name="arrow" className="h-20 w-28 -scale-x-100 rotate-[-20deg]" />
-          <Note className="mt-1 -rotate-3">psst... AI reads this too</Note>
+          <Note className="mt-1 -rotate-3">P.S. AI reads this too</Note>
         </div>
         <Container className="relative py-20 md:py-32">
           <div className="flex items-center gap-3">
@@ -95,8 +95,8 @@ export default function Home() {
         <Container className="grid gap-14 md:grid-cols-2">
           <div>
             <p className="eyebrow text-lavender">Why it matters now</p>
-            <h2 className="mt-4 text-4xl md:text-5xl"><DotI>Search has changed. Most marketing hasn&apos;t caught up.</DotI></h2>
-            <Note className="mt-6 -rotate-2 text-lavender">the bit most marketing skips</Note>
+            <h2 className="mt-4 text-4xl md:text-5xl"><DotI>Search has changed. Most agencies haven&apos;t caught up yet.</DotI></h2>
+            <Note className="mt-6 -rotate-2 text-lavender">the important bit that most skip</Note>
           </div>
           <div className="space-y-5 text-lg text-white/80">
             <p>

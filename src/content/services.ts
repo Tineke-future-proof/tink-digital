@@ -37,7 +37,7 @@ export const pillars: Pillar[] = [
       "Technical SEO audits and fixes",
       "Schema and structured data",
       "Entity optimisation",
-      "Website builds on Next.js, Shopify and HubSpot",
+      "Fast, efficient website builds, without the high cost",
       "Site speed and Core Web Vitals",
     ],
   },

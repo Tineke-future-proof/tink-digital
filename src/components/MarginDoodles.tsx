@@ -67,7 +67,11 @@ const marks: Record<string, Mark[]> = {
   leaf: [{ d: "M16 86 C 16 40, 48 12, 88 12 C 88 52, 60 86, 16 86 M16 86 L72 30" }],
   dot: [{ d: "M50 30 C 64 30, 70 46, 64 58 C 56 72, 34 68, 32 52 C 30 38, 40 30, 50 30", fill: true }],
   hatch: [{ d: "M20 14 L18 86 M34 12 L32 88 M48 14 L46 86 M62 12 L60 88 M76 14 L74 86" }],
-  yes: [{ text: "yes!", size: 64 }],
+  scribbleLoop: [
+    {
+      d: "M18 50 C 30 20, 70 18, 78 40 C 86 62, 52 80, 32 68 C 14 56, 30 28, 56 30 C 80 32, 84 60, 62 70 C 44 78, 30 62, 40 48 C 50 36, 70 44, 64 58",
+    },
+  ],
   xox: [{ text: "xox", size: 68 }],
   wow: [{ text: "wow", size: 66 }],
   ok: [{ text: "ok!", size: 70 }],
@@ -78,7 +82,7 @@ type MarkName = keyof typeof marks;
 // Six marks per page, alternating sides and spread down the page.
 const placements: { name: MarkName; side: "left" | "right"; top: string }[] = [
   { name: "eye", side: "left", top: "6%" },
-  { name: "yes", side: "right", top: "22%" },
+  { name: "scribbleLoop", side: "right", top: "22%" },
   { name: "heart", side: "left", top: "39%" },
   { name: "spiral", side: "right", top: "55%" },
   { name: "crown", side: "left", top: "71%" },
@@ -131,6 +135,7 @@ function Mark({ name, seed }: { name: MarkName; seed: number }) {
               fill={m.fill ? "currentColor" : "none"}
               strokeWidth={4.6}
               vectorEffect="non-scaling-stroke"
+              className={name === "scribbleLoop" ? "scribble-loop" : undefined}
             />
           ),
         )}

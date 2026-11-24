@@ -88,14 +88,27 @@ export function JsonLd({ data }: { data: object }) {
 
 // Swaps the dot on every lowercase "i" for the brand's blue dot, like the logo.
 // Used inside H1 and H2 headings only.
-function dotText(text: string, keyBase: string): ReactNode[] {
-  return text.split(/(i)/).map((part, n) =>
+function dotWord(word: string, keyBase: string): ReactNode[] {
+  return word.split(/(i)/).map((part, n) =>
     part === "i" ? (
       <span key={`${keyBase}-${n}`} className="ti">
         {"\u0131"}
       </span>
     ) : (
       part
+    ),
+  );
+}
+
+function dotText(text: string, keyBase: string): ReactNode[] {
+  // Split on spaces and keep each word with an i on one line, so it can't break mid-word.
+  return text.split(/(\s+)/).map((word, n) =>
+    word.includes("i") ? (
+      <span key={`${keyBase}-w${n}`} className="whitespace-nowrap">
+        {dotWord(word, `${keyBase}-w${n}`)}
+      </span>
+    ) : (
+      word
     ),
   );
 }

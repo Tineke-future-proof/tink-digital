@@ -40,7 +40,9 @@ export default function ServicesPage() {
         eyebrow="Services"
         title={
           <>
-            Trusted. Indexed. Noticed. Known
+            <span className="text-blue">T</span>rusted. <span className="text-blue">I</span>ndexed.
+            <br />
+            <span className="text-blue">N</span>oticed. <span className="text-blue">K</span>nown.
           </>
         }
         intro="Everything we do is about one thing: making sure the right people find you, understand what you do, and choose you. Pick one area or bring them together."

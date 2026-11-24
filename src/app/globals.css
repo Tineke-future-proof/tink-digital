@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import "@fontsource-variable/fraunces/full.css";
+@import "@fontsource-variable/literata/opsz.css";
 @import "@fontsource-variable/inter";
 @import "@fontsource/caveat/600.css";
 
@@ -11,7 +11,7 @@
   --color-rule: #cfcfd6;
   --color-rule-dark: #3a3a44;
   --color-muted: #55556a;
-  --font-serif: "Fraunces Variable", Georgia, serif;
+  --font-serif: "Literata Variable", Georgia, serif;
   --font-sans: "Inter Variable", system-ui, sans-serif;
   --font-hand: "Caveat", "Comic Sans MS", cursive;
   --color-graphite: #4a4a58;
@@ -34,10 +34,10 @@ h1,
 h2,
 h3 {
   font-family: var(--font-serif);
-  font-weight: 650;
+  font-weight: 750;
+  font-variation-settings: "opsz" 24;
   letter-spacing: -0.005em;
   line-height: 1.08;
-  font-variation-settings: "opsz" 48, "SOFT" 100, "WONK" 0;
 }
 
 .eyebrow {
@@ -86,7 +86,31 @@ body {
   }
 }
 
+/* Charcoal scribble that keeps drawing and rubbing itself out */
+.scribble-loop {
+  stroke-dasharray: 520;
+  stroke-dashoffset: 520;
+  animation: scribble-loop 6s ease-in-out infinite;
+}
+
+@keyframes scribble-loop {
+  0% {
+    stroke-dashoffset: 520;
+  }
+  45%,
+  70% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -520;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
+  .scribble-loop {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
   .doodle-draw {
     animation: none;
     stroke-dashoffset: 0;
@@ -102,7 +126,7 @@ body {
   content: "";
   position: absolute;
   left: 50%;
-  top: 0.07em;
+  top: 0.16em;
   width: 0.2em;
   height: 0.2em;
   border-radius: 9999px;

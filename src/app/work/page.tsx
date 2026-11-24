@@ -56,9 +56,7 @@ export default function WorkPage() {
           <div className="grid gap-px overflow-hidden rounded-3xl border border-rule bg-rule sm:grid-cols-2 lg:grid-cols-3">
             {capabilities.map((c) => (
               <div key={c.name} className="bg-paper p-8">
-                <h2 className="text-2xl"><DotI>
-                  {c.name}
-                </DotI></h2>
+                <h2 className="text-2xl">{c.name}</h2>
                 <p className="mt-3 text-muted">{c.note}</p>
               </div>
             ))}

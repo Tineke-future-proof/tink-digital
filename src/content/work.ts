@@ -13,7 +13,7 @@ export type WorkItem = {
 export const featured: WorkItem = {
   title: "Diamond Thai Boxing",
   context: "Muay Thai gym, Whangamatā",
-  body: "A new website for a local Muay Thai gym, built on Next.js and Vercel. Class timetables, coaches and kids' classes, laid out so locals and search engines can find the right class quickly. Ongoing quarterly timetable updates included.",
+  body: "A new website for a local Muay Thai gym, built in just a week, with supporting social posts and a content calendar.",
   pillars: ["Indexed", "Known"],
   tags: ["Website build", "Local SEO", "Schema"],
   status: "Launching soon",
@@ -21,13 +21,13 @@ export const featured: WorkItem = {
 
 export const work: WorkItem[] = [
   {
-    title: "Building an agency's AEO practice from the ground up",
+    title: "Building an AEO practice from the ground up",
     context: "Digital agency, New Zealand and Australia",
     body: "Built the agency's answer engine optimisation capability: the methodology, schema and entity optimisation, client audits, and a public 90-day experiment on its own AI visibility, documented week by week as a LinkedIn series.",
     pillars: ["Noticed", "Indexed"],
     tags: ["AEO", "Schema", "Entity optimisation"],
     // TODO: confirm you're comfortable using this publicly reported figure.
-    result: "Tracked AI visibility grew from 0.21% to 11.59% in two months.",
+    result: "Tracked AI visibility grew from 0.21% to 22.30% in 90 days.",
   },
   {
     title: "Moving an agency website off a hosted CMS",
