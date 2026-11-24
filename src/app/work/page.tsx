@@ -1,0 +1,100 @@
+import type { Metadata } from "next";
+import { Container, CtaBand, PageHero } from "@/components/ui";
+import { featured, work, type WorkItem } from "@/content/work";
+
+export const metadata: Metadata = {
+  title: "Work: helping brands be seen and known online",
+  description:
+    "AEO, SEO, website builds, strategy, digital advertising and content for brands across New Zealand and Australia.",
+  alternates: { canonical: "/work" },
+};
+
+const capabilities = [
+  { name: "AEO", note: "Getting brands cited and recommended by ChatGPT and Google's AI answers." },
+  { name: "SEO", note: "Technical fixes, schema and content that help search engines understand you." },
+  { name: "Website builds", note: "Next.js, Shopify and HubSpot sites that are fast and easy to run." },
+  { name: "Strategy", note: "Positioning, messaging and a plan that joins the channels up." },
+  { name: "Digital advertising", note: "Search and social campaigns aimed at the people who matter." },
+  { name: "Content creation", note: "Blogs, landing pages, product copy and email that answer real questions." },
+];
+
+function Card({ item }: { item: WorkItem }) {
+  return (
+    <article className="flex h-full flex-col rounded-3xl border border-rule bg-white p-8">
+      <p className="text-sm text-muted">{item.context}</p>
+      <h3 className="mt-3 text-2xl">{item.title}</h3>
+      <p className="mt-4 flex-1 text-muted">{item.body}</p>
+      {item.result && <p className="mt-6 font-serif text-xl text-blue">{item.result}</p>}
+      <ul className="mt-6 flex flex-wrap gap-2">
+        {item.tags.map((t) => (
+          <li key={t} className="rounded-full border border-rule px-3 py-1 text-xs font-semibold tracking-wide text-muted">
+            {t}
+          </li>
+        ))}
+      </ul>
+    </article>
+  );
+}
+
+export default function WorkPage() {
+  return (
+    <>
+      <PageHero
+        eyebrow="Work"
+        title={
+          <>
+            Helping brands be seen and known online<span className="dot" />
+          </>
+        }
+        intro="Whether it's AEO, SEO, a new website, strategy, digital advertising or content, the goal is the same: make it easy for the right people to find you and choose you."
+      />
+
+      <section className="py-16 md:py-24">
+        <Container>
+          <div className="grid gap-px overflow-hidden rounded-3xl border border-rule bg-rule sm:grid-cols-2 lg:grid-cols-3">
+            {capabilities.map((c) => (
+              <div key={c.name} className="bg-paper p-8">
+                <h2 className="text-2xl">
+                  {c.name}
+                  <span className="dot" />
+                </h2>
+                <p className="mt-3 text-muted">{c.note}</p>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      <section className="bg-ink py-16 text-white md:py-24">
+        <Container className="grid items-center gap-10 md:grid-cols-2">
+          <div>
+            <p className="eyebrow text-lavender">Featured project</p>
+            <h2 className="mt-4 text-4xl md:text-5xl">{featured.title}</h2>
+            <p className="mt-2 text-white/60">{featured.context}</p>
+          </div>
+          <div>
+            <p className="text-lg text-white/80">{featured.body}</p>
+            <p className="mt-6 inline-flex rounded-full bg-blue px-4 py-1.5 text-sm font-semibold">{featured.status}</p>
+          </div>
+        </Container>
+      </section>
+
+      <section className="py-16 md:py-24">
+        <Container>
+          <h2 className="max-w-3xl text-4xl md:text-5xl">Agency and client work</h2>
+          <p className="mt-5 max-w-2xl text-lg text-muted">
+            Most of my recent work was delivered as part of an agency team, so client names stay private. Here&apos;s
+            the kind of work I lead.
+          </p>
+          <div className="mt-12 grid gap-6 md:grid-cols-2">
+            {work.map((item) => (
+              <Card key={item.title} item={item} />
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      <CtaBand />
+    </>
+  );
+}

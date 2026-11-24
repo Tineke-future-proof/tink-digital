@@ -1,0 +1,67 @@
+// Client work is described without names, except where the client has agreed to be named.
+
+export type WorkItem = {
+  title: string;
+  context: string;
+  body: string;
+  pillars: ("Trusted" | "Indexed" | "Noticed" | "Known")[];
+  tags: string[];
+  result?: string;
+  status?: string;
+};
+
+export const featured: WorkItem = {
+  title: "Diamond Thai Boxing",
+  context: "Muay Thai gym, Whangamatā",
+  body: "A new website for a local Muay Thai gym, built on Next.js and Vercel. Class timetables, coaches and kids' classes, laid out so locals and search engines can find the right class quickly. Ongoing quarterly timetable updates included.",
+  pillars: ["Indexed", "Known"],
+  tags: ["Website build", "Local SEO", "Schema"],
+  status: "Launching soon",
+};
+
+export const work: WorkItem[] = [
+  {
+    title: "Building an agency's AEO practice from the ground up",
+    context: "Digital agency, New Zealand and Australia",
+    body: "Built the agency's answer engine optimisation capability: the methodology, schema and entity optimisation, client audits, and a public 90-day experiment on its own AI visibility, documented week by week as a LinkedIn series.",
+    pillars: ["Noticed", "Indexed"],
+    tags: ["AEO", "Schema", "Entity optimisation"],
+    // TODO: confirm you're comfortable using this publicly reported figure.
+    result: "Tracked AI visibility grew from 0.21% to 11.59% in two months.",
+  },
+  {
+    title: "Moving an agency website off a hosted CMS",
+    context: "Digital agency",
+    body: "Worked on the move of an agency website from HubSpot CMS to Next.js on Vercel, built with Claude Code, followed by performance tuning to make the new site faster.",
+    pillars: ["Indexed"],
+    tags: ["Website build", "Migration", "Performance"],
+  },
+  {
+    title: "Email nurture for an education brand",
+    context: "Education provider, Australia and New Zealand",
+    body: "Designed and built HubSpot email nurture journeys for two distinct audiences, alongside campaign content, technical SEO fixes and monthly performance reporting.",
+    pillars: ["Known", "Indexed"],
+    tags: ["HubSpot", "Email nurture", "Reporting"],
+  },
+  {
+    title: "SEO and AEO for a New Zealand consumer brand",
+    context: "Consumer products, New Zealand",
+    body: "Ongoing SEO and AEO, marketing automation and product launch support, working alongside the in-house marketing team and reviewing their SEO work.",
+    pillars: ["Noticed", "Indexed", "Known"],
+    tags: ["SEO", "AEO", "Automation", "Product launch"],
+  },
+  {
+    title: "Audit and reporting for a health retailer",
+    context: "Pharmacy and health retailer on Shopify",
+    body: "An SEO and AEO audit, plus monthly performance reporting that explains what changed and why it matters.",
+    pillars: ["Indexed", "Known"],
+    tags: ["Shopify", "SEO audit", "Reporting"],
+  },
+  {
+    title: "Shopify build for a fashion boutique",
+    context: "Independent fashion retailer",
+    body: "A full Shopify build, from setup through to launch, with launch support afterwards.",
+    pillars: ["Indexed", "Known"],
+    tags: ["Shopify", "Website build"],
+  },
+];
