@@ -19,6 +19,16 @@ export const featured: WorkItem = {
   status: "Launching soon",
 };
 
+// Placeholder: update the description once the project is under way.
+export const upcoming: WorkItem = {
+  title: "Webb Design & Build",
+  context: "Design and build, Whangamatā",
+  body: "A new website for a licensed design-and-build firm creating quality beach homes. More details coming soon.",
+  pillars: ["Indexed", "Known"],
+  tags: ["Website build"],
+  status: "Coming soon",
+};
+
 export const work: WorkItem[] = [
   {
     title: "Building AEO practice",

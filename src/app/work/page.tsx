@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Container, CtaBand, PageHero, DotI } from "@/components/ui";
-import { featured, work, type WorkItem } from "@/content/work";
+import { featured, upcoming, work, type WorkItem } from "@/content/work";
 
 export const metadata: Metadata = {
   title: "Work: helping brands be seen and known online",
@@ -65,15 +65,23 @@ export default function WorkPage() {
       </section>
 
       <section className="bg-ink py-16 text-white md:py-24">
-        <Container className="grid items-center gap-10 md:grid-cols-2">
-          <div>
-            <p className="eyebrow text-lavender">Featured project</p>
-            <h2 className="mt-4 text-4xl md:text-5xl"><DotI>{featured.title}</DotI></h2>
-            <p className="mt-2 text-white/60">{featured.context}</p>
-          </div>
-          <div>
-            <p className="text-lg text-white/80">{featured.body}</p>
-            <p className="mt-6 inline-flex rounded-full bg-blue px-4 py-1.5 text-sm font-semibold">{featured.status}</p>
+        <Container>
+          <p className="eyebrow text-lavender">Featured projects</p>
+          <div className="mt-8 divide-y divide-rule-dark border-y border-rule-dark">
+            {[featured, upcoming].map((item) => (
+              <div key={item.title} className="grid items-center gap-8 py-10 md:grid-cols-2">
+                <div>
+                  <h2 className="text-4xl md:text-5xl">
+                    <DotI>{item.title}</DotI>
+                  </h2>
+                  <p className="mt-2 text-white/60">{item.context}</p>
+                </div>
+                <div>
+                  <p className="text-lg text-white/80">{item.body}</p>
+                  <p className="mt-6 inline-flex rounded-full bg-blue px-4 py-1.5 text-sm font-semibold">{item.status}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </Container>
       </section>
