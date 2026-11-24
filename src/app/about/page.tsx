@@ -5,18 +5,21 @@ import { Container, CtaBand, PageHero, DotI } from "@/components/ui";
 export const metadata: Metadata = {
   title: "About Tineke Madgwick",
   description:
-    "Tineke Madgwick has around 20 years in brand, PR and digital marketing across health, beauty, financial services and luxury goods, and built an agency AEO practice from the ground up.",
+    "Tineke Madgwick has around 20 years in brand, PR and digital marketing across health, beauty, fragrance and financial services, and built an agency AEO practice from the ground up.",
   alternates: { canonical: "/about" },
 };
 
-// Add a "years" value to any role to show time spent, e.g. years: "6 years".
+// Time spent, from LinkedIn. Businesses are described by industry, not named.
 const career: { org: string; role: string; years?: string }[] = [
-  { org: "Digital agency, New Zealand", role: "Brand Steward. Built the agency's AEO capability from the ground up." },
-  { org: "Health and wellness", role: "Marketing Manager, New Zealand, plus FMCG PR." },
-  { org: "Beauty and pharmaceuticals, Melbourne", role: "Brand and product management." },
-  { org: "Financial services", role: "Crisis communication management." },
-  { org: "Luxury goods", role: "Business development." },
-]
+  { org: "Digital agency, New Zealand", years: "1 year", role: "Brand Steward. Built the agency's AEO capability from the ground up." },
+  { org: "Financial services, New Zealand", years: "3.5 years", role: "Communications and Product Manager, then Brand and Communications Specialist, including crisis communication." },
+  { org: "Health and wellness, New Zealand", years: "6 years", role: "Marketing Manager, plus FMCG PR." },
+  { org: "Prestige beauty, New Zealand", years: "5 years", role: "Group Brand Manager, then Senior Brand Manager across prestige, masstige and mass beauty brands, including new brand acquisition." },
+  { org: "Pharmaceutical skincare, Melbourne", years: "11 months", role: "Senior Brand Manager." },
+  { org: "Professional haircare, Melbourne", years: "1 year 8 months", role: "Product Manager." },
+  { org: "Prestige fragrance, Sydney", years: "2 years", role: "Senior Brand Manager." },
+  { org: "Cosmetics, Sydney", years: "2 years", role: "Assistant Brand Manager." },
+];
 
 const credentials = [
   "Degree in Communications, majoring in Public Relations",
@@ -45,7 +48,7 @@ export default function AboutPage() {
             <p>
               I&apos;ve spent around 20 years in marketing, across brand management, product management, PR and
               digital strategy. I&apos;ve looked after household names in health, beauty and wellness, managed
-              communications through a crisis, and sold luxury goods. That breadth is why I care as much about the
+              communications through a crisis, and managed prestige beauty and fragrance brands. That breadth is why I care as much about the
               story a brand tells as the technical work behind it.
             </p>
             <p>
