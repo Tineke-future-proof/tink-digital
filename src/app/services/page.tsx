@@ -43,7 +43,7 @@ export default function ServicesPage() {
             Trusted. Indexed. Noticed. Known
           </>
         }
-        intro="Everything I do is about one thing: making sure the right people find you, understand what you do, and choose you. Pick one area or bring them together."
+        intro="Everything we do is about one thing: making sure the right people find you, understand what you do, and choose you. Pick one area or bring them together."
       />
 
       {pillars.map((p, i) => (

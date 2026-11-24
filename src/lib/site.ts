@@ -5,7 +5,7 @@ export const site = {
   name: "Tink Digital",
   founder: "Tineke Madgwick",
   tagline: "Trusted • Indexed • Noticed • Known",
-  positioning: "I help brands get found, understood and chosen, online and in the real world.",
+  positioning: "We help brands get found, understood and chosen, online and in the real world.",
   description:
     "Tink Digital helps New Zealand and Australian brands get found, understood and chosen across Google and AI search, through AEO, SEO, website builds, strategy, digital advertising and content.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.tinkdigital.co",

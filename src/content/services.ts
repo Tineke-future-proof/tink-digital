@@ -16,7 +16,7 @@ export const pillars: Pillar[] = [
     title: "Brand strategy and communications",
     summary: "Clear positioning and messaging that people, and the AI tools they ask, can rely on.",
     intro:
-      "Before anyone chooses you, they need to trust you. That comes from a clear brand, consistent information everywhere you appear, and communications that hold up when it matters. I bring nearly two decades of brand management and PR, from FMCG launches to crisis communication.",
+      "Before anyone chooses you, they need to trust you. That comes from a clear brand, consistent information everywhere you appear, and communications that hold up when it matters. We bring nearly two decades of brand management and PR, from FMCG launches to crisis communication.",
     services: [
       "Brand strategy and positioning",
       "Tone of voice and key messaging",
@@ -32,7 +32,7 @@ export const pillars: Pillar[] = [
     title: "SEO and website builds",
     summary: "Fast, well-structured websites that search engines and AI can crawl, read and understand.",
     intro:
-      "If search engines can't crawl and understand your site, nothing else matters. I fix the technical foundations, add the structured data that helps machines understand who you are, and build websites that are quick, clear and easy to keep up to date.",
+      "If search engines can't crawl and understand your site, nothing else matters. We fix the technical foundations, add the structured data that helps machines understand who you are, and build websites that are quick, clear and easy to keep up to date.",
     services: [
       "Technical SEO audits and fixes",
       "Schema and structured data",
@@ -48,7 +48,7 @@ export const pillars: Pillar[] = [
     title: "AEO and digital advertising",
     summary: "Show up when people ask ChatGPT, Google and other AI tools for a recommendation.",
     intro:
-      "More people now ask an AI for recommendations before they ever click a link. Answer engine optimisation (AEO) is how you make sure your brand is part of that answer. I pair it with targeted digital advertising so you're seen in the places that count.",
+      "More people now ask an AI for recommendations before they ever click a link. Answer engine optimisation (AEO) is how you make sure your brand is part of that answer. We pair it with targeted digital advertising so you're seen in the places that count.",
     services: [
       "AEO and AI search visibility",
       "AI visibility tracking and prompt research",
@@ -64,7 +64,7 @@ export const pillars: Pillar[] = [
     title: "Content, email and reporting",
     summary: "Content and email that build familiarity, and reports that tell you what's working.",
     intro:
-      "Being known means people remember you and come back. I create content that answers real questions, build email journeys that keep you front of mind, and report on performance as a story you can act on, not a spreadsheet of numbers.",
+      "Being known means people remember you and come back. We create content that answers real questions, build email journeys that keep you front of mind, and report on performance as a story you can act on, not a spreadsheet of numbers.",
     services: [
       "Content strategy and creation",
       "Blogs, landing pages and product copy",
@@ -82,18 +82,18 @@ export const faqs = [
   },
   {
     q: "Do I still need SEO if I'm doing AEO?",
-    a: "Yes. AI tools lean heavily on content they can find, crawl and trust, so strong SEO foundations make AEO work. I treat them as one joined-up programme.",
+    a: "Yes. AI tools lean heavily on content they can find, crawl and trust, so strong SEO foundations make AEO work. We treat them as one joined-up programme.",
   },
   {
     q: "Do you work with businesses outside New Zealand?",
-    a: "Yes. I'm based in Whangamatā and work with brands across New Zealand and Australia.",
+    a: "Yes. We're based in Whangamatā and work with brands across New Zealand and Australia.",
   },
   {
     q: "Which platforms do you build websites on?",
-    a: "Next.js on Vercel, Shopify and HubSpot. I'll recommend the one that suits your business, your budget and how much you want to manage yourself.",
+    a: "Next.js on Vercel, Shopify and HubSpot. We'll recommend the one that suits your business, your budget and how much you want to manage yourself.",
   },
   {
     q: "Can you work alongside my in-house team or agency?",
-    a: "Absolutely. A lot of my work is reviewing, guiding and upskilling in-house marketers so the improvements stick.",
+    a: "Absolutely. A lot of our work is reviewing, guiding and upskilling in-house marketers so the improvements stick.",
   },
 ];

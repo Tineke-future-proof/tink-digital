@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import "@fontsource-variable/fraunces/opsz.css";
+@import "@fontsource-variable/fraunces/full.css";
 @import "@fontsource-variable/inter";
 @import "@fontsource/caveat/600.css";
 
@@ -37,7 +37,7 @@ h3 {
   font-weight: 650;
   letter-spacing: -0.005em;
   line-height: 1.08;
-  font-variation-settings: "opsz" 48;
+  font-variation-settings: "opsz" 48, "SOFT" 100, "WONK" 0;
 }
 
 .eyebrow {

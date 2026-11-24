@@ -82,8 +82,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         </a>
         <Header />
         <main id="main" className="relative flex-1">
-          <MarginDoodles side="left" />
-          <MarginDoodles side="right" />
+          <MarginDoodles />
           <div className="relative z-10">{children}</div>
         </main>
         <Footer />

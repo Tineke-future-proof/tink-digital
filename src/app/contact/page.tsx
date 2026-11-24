@@ -26,7 +26,7 @@ export default function ContactPage() {
             Let&apos;s talk
           </>
         }
-        intro="Tell me a bit about your business and what you'd like to change. I'll come back to you with honest thoughts on where to start, whether or not we end up working together."
+        intro="Tell us a bit about your business and what you'd like to change. We'll come back to you with honest thoughts on where to start, whether or not we end up working together."
       />
       <section className="py-16 md:py-24">
         <Container className="grid gap-6 md:grid-cols-3">

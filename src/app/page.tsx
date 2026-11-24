@@ -5,9 +5,9 @@ import { pillars } from "@/content/services";
 import { featured, work } from "@/content/work";
 
 const proofPoints = [
-  { label: "Years in marketing", value: "20" },
-  { label: "Where I've worked", value: "FMCG, beauty, health, finance, agency" },
-  { label: "Where I work", value: "New Zealand and Australia" },
+  { label: "Years of experience", value: "20" },
+  { label: "Where we've worked", value: "FMCG, beauty, health, finance, agency" },
+  { label: "Where we work", value: "New Zealand and Australia" },
 ];
 
 export default function Home() {
@@ -16,7 +16,6 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="relative overflow-hidden border-b border-rule">
-        <div aria-hidden className="absolute -top-20 -right-20 h-40 w-40 rounded-full bg-blue md:-top-24 md:-right-24 md:h-[28rem] md:w-[28rem]" />
         <div className="absolute top-80 right-10 hidden w-56 text-graphite lg:block md:top-[29rem] xl:right-[calc((100vw-72rem)/2+2.5rem)]">
           <Doodle name="arrow" className="h-20 w-28 -scale-x-100 rotate-[-20deg]" />
           <Note className="mt-1 -rotate-3">psst... AI reads this too</Note>
@@ -34,13 +33,13 @@ export default function Home() {
             </span>
           </DotI></h1>
           <p className="mt-8 max-w-2xl text-lg text-muted md:text-xl">
-            I help brands show up where people are looking, on Google and in AI answers, and in the real world.
+            We help brands show up where people are looking, on Google and in AI answers, and in the real world.
             AEO, SEO, website builds, strategy, digital advertising and content, joined up.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <ButtonLink href="/contact">Start a conversation</ButtonLink>
             <ButtonLink href="/services" variant="secondary">
-              How I can help
+              How we can help
             </ButtonLink>
           </div>
         </Container>
@@ -50,7 +49,7 @@ export default function Home() {
       <section className="py-20 md:py-28">
         <Container>
           <div className="max-w-2xl">
-            <Eyebrow>What I do</Eyebrow>
+            <Eyebrow>What we do</Eyebrow>
             <h2 className="mt-4 text-4xl md:text-5xl"><DotI>
               <span className="relative inline-block">
                 Four
@@ -59,7 +58,7 @@ export default function Home() {
               things every brand needs to be
             </DotI></h2>
             <p className="mt-5 text-lg text-muted">
-              Tink stands for what I help you become. Each one builds on the last, and together they make you the
+              Tink stands for what we help you become. Each one builds on the last, and together they make you the
               obvious choice.
             </p>
           </div>
@@ -106,7 +105,7 @@ export default function Home() {
               wrong, you&apos;re not in the conversation.
             </p>
             <p>
-              I&apos;ve spent the past year building AEO from the ground up and testing it in public. I bring that
+              We&apos;ve spent the past year building AEO from the ground up and testing it in public. We bring that
               together with nearly two decades of brand, PR and digital marketing, so the technical work and the
               story you tell actually line up.
             </p>

@@ -1,4 +1,4 @@
-// Charcoal-style doodles that run down the left and right margins of every page.
+// A handful of charcoal-style doodles in the page margins.
 // All shapes are original, drawn on a 100 x 100 grid. A shared "charcoal" filter
 // (see CharcoalDefs) gives them a rough, grainy, hand-drawn texture.
 
@@ -75,15 +75,14 @@ const marks: Record<string, Mark[]> = {
 
 type MarkName = keyof typeof marks;
 
-const leftOrder: MarkName[] = [
-  "eye", "dashes", "heart", "zigzag", "yes", "spiral", "crown", "plus", "cloud", "star",
-  "dot", "grid", "bolt", "xox", "moon", "scribble", "arrowUp", "flower", "cross", "smiley",
-  "drop", "hatch", "bubble", "diamond", "sun", "ok", "leaf", "splat", "checkCircle", "wow",
-];
-const rightOrder: MarkName[] = [
-  "sun", "bubble", "splat", "checkCircle", "scribble", "wow", "drop", "grid", "smiley", "leaf",
-  "zigzag", "crown", "dot", "ok", "eye", "hatch", "star", "plus", "spiral", "cloud",
-  "heart", "bolt", "dashes", "flower", "xox", "diamond", "moon", "cross", "yes", "arrowUp",
+// Six marks per page, alternating sides and spread down the page.
+const placements: { name: MarkName; side: "left" | "right"; top: string }[] = [
+  { name: "eye", side: "left", top: "6%" },
+  { name: "yes", side: "right", top: "22%" },
+  { name: "heart", side: "left", top: "39%" },
+  { name: "spiral", side: "right", top: "55%" },
+  { name: "crown", side: "left", top: "71%" },
+  { name: "star", side: "right", top: "86%" },
 ];
 
 // Small deterministic "random" so the layout is the same on every render.
@@ -95,7 +94,7 @@ function rand(seed: number) {
 function Mark({ name, seed }: { name: MarkName; seed: number }) {
   const size = 46 + Math.round(rand(seed) * 24);
   const rotate = Math.round((rand(seed + 1) - 0.5) * 36);
-  const shift = Math.round(rand(seed + 2) * 30);
+  const shift = Math.round(rand(seed + 2) * 12);
   return (
     <svg
       aria-hidden
@@ -140,21 +139,21 @@ function Mark({ name, seed }: { name: MarkName; seed: number }) {
   );
 }
 
-export default function MarginDoodles({ side }: { side: "left" | "right" }) {
-  const order = side === "left" ? leftOrder : rightOrder;
-  const list = [...order, ...order];
+export default function MarginDoodles() {
   return (
-    <div
-      aria-hidden
-      className={`pointer-events-none absolute inset-y-0 z-0 hidden w-[calc((100vw-72rem)/2+2rem)] max-w-44 overflow-hidden text-charcoal/85 xl:block ${
-        side === "left" ? "left-0" : "right-0"
-      }`}
-    >
-      <div className={`flex flex-col gap-14 pt-16 ${side === "left" ? "items-start pl-3" : "items-end pr-10"}`}>
-        {list.map((name, i) => (
-          <Mark key={`${name}-${i}`} name={name} seed={i * 7 + (side === "left" ? 1 : 101)} />
-        ))}
-      </div>
+    <div aria-hidden className="pointer-events-none absolute inset-0 z-0 hidden overflow-hidden text-charcoal/85 xl:block">
+      {placements.map((p, i) => (
+        <div
+          key={p.name}
+          className="absolute"
+          style={{
+            top: p.top,
+            [p.side]: "max(0.75rem, calc((100vw - 72rem) / 2 - 3rem))",
+          }}
+        >
+          <Mark name={p.name} seed={i * 7 + 3} />
+        </div>
+      ))}
     </div>
   );
 }

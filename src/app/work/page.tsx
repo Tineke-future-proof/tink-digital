@@ -41,7 +41,7 @@ export default function WorkPage() {
     <>
       <PageHero
         doodle="spiral"
-        note="a few things I have made"
+        note="a few things we have made"
         eyebrow="Work"
         title={
           <>
@@ -84,8 +84,8 @@ export default function WorkPage() {
         <Container>
           <h2 className="max-w-3xl text-4xl md:text-5xl"><DotI>Agency and client work</DotI></h2>
           <p className="mt-5 max-w-2xl text-lg text-muted">
-            Most of my recent work was delivered as part of an agency team, so client names stay private. Here&apos;s
-            the kind of work I lead.
+            Much of our founder&apos;s recent work was delivered inside an agency team, so client names stay
+            private. Here&apos;s the kind of work we lead.
           </p>
           <div className="mt-12 grid gap-6 md:grid-cols-2">
             {work.map((item) => (
