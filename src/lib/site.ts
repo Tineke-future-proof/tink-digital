@@ -13,7 +13,7 @@ export const site = {
   phone: "021 804 603",
   phoneHref: "tel:+6421804603",
   linkedin: "https://www.linkedin.com/in/tineke-madgwick-26003425/",
-  location: "Whangamatā, Coromandel, New Zealand",
+  location: "Whangamatā, New Zealand",
   areaServed: ["New Zealand", "Australia"],
   // The site stays out of search engines until this is "true".
   live: process.env.NEXT_PUBLIC_SITE_LIVE === "true",
