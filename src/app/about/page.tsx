@@ -48,9 +48,9 @@ export default function AboutPage() {
               story a brand tells as the technical work behind it.
             </p>
             <p>
-              Most recently I built an agency&apos;s answer engine optimisation (AEO) practice from scratch, and
-              tested it in public on the agency&apos;s own website. I became the go-to person for SEO, AEO, schema
-              and entity optimisation, and worked hands-on across Shopify, HubSpot and custom website builds.
+              I&apos;ve built answer engine optimisation (AEO) practice from scratch, and became the go-to person for
+              SEO, AEO, schema and entity optimisation. I&apos;ve also worked hands-on across Shopify, HubSpot and
+              custom website builds.
             </p>
             <p>
               Tink Digital brings all of that together. You get senior, joined-up thinking without the agency
