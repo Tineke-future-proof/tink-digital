@@ -54,8 +54,10 @@ export default function ServicesPage() {
         >
           <Container className="grid gap-10 md:grid-cols-[0.8fr_1.2fr]">
             <div>
-              <p className="font-serif text-8xl font-semibold text-blue">{p.letter}</p>
-              <h2 className="mt-4 text-4xl md:text-5xl"><DotI>{p.word}</DotI></h2>
+              <h2 className="text-5xl md:text-6xl">
+                <span className="text-blue">{p.letter}</span>
+                <DotI>{p.word.slice(1)}</DotI>
+              </h2>
               <p className="eyebrow mt-3 !tracking-[0.18em] text-muted">{p.title}</p>
             </div>
             <div>

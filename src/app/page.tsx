@@ -77,8 +77,10 @@ export default function Home() {
                 href={`/services#${p.slug}`}
                 className="group bg-white p-8 transition-colors hover:bg-ink hover:text-white md:p-10"
               >
-                <p className="font-serif text-6xl font-semibold text-blue group-hover:text-lavender">{p.letter}</p>
-                <h3 className="mt-4 text-2xl md:text-3xl">{p.word}</h3>
+                <h3 className="text-3xl md:text-4xl">
+                  <span className="text-blue group-hover:text-lavender">{p.letter}</span>
+                  {p.word.slice(1)}
+                </h3>
                 <p className="eyebrow mt-2 !tracking-[0.18em] text-muted group-hover:text-white/60">{p.title}</p>
                 <p className="mt-4 text-muted group-hover:text-white/80">{p.summary}</p>
               </Link>
