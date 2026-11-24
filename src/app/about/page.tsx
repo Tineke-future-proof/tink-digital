@@ -5,17 +5,18 @@ import { Container, CtaBand, PageHero, DotI } from "@/components/ui";
 export const metadata: Metadata = {
   title: "About Tineke Madgwick",
   description:
-    "Tineke Madgwick has around 20 years in brand, PR and digital marketing, including Swisse Wellness, L'Oréal and Ego Pharmaceuticals, and built an agency AEO practice from the ground up.",
+    "Tineke Madgwick has around 20 years in brand, PR and digital marketing across health, beauty, financial services and luxury goods, and built an agency AEO practice from the ground up.",
   alternates: { canonical: "/about" },
 };
 
-const career = [
+// Add a "years" value to any role to show time spent, e.g. years: "6 years".
+const career: { org: string; role: string; years?: string }[] = [
   { org: "Digital agency, New Zealand", role: "Brand Steward. Built the agency's AEO capability from the ground up." },
-  { org: "Swisse Wellness (H&H Group)", role: "Marketing Manager, New Zealand, plus FMCG PR." },
-  { org: "L'Oréal and Ego Pharmaceuticals", role: "Brand and product management, Melbourne." },
-  { org: "Unity Credit Union", role: "Crisis communication management." },
-  { org: "Grange and Trimex", role: "Business development in luxury goods." },
-];
+  { org: "Health and wellness", role: "Marketing Manager, New Zealand, plus FMCG PR." },
+  { org: "Beauty and pharmaceuticals, Melbourne", role: "Brand and product management." },
+  { org: "Financial services", role: "Crisis communication management." },
+  { org: "Luxury goods", role: "Business development." },
+]
 
 const credentials = [
   "Degree in Communications, majoring in Public Relations",
@@ -79,7 +80,10 @@ export default function AboutPage() {
             <ul className="mt-8 divide-y divide-rule border-y border-rule">
               {career.map((c) => (
                 <li key={c.org} className="py-5">
-                  <p className="font-serif text-xl">{c.org}</p>
+                  <p className="flex items-baseline justify-between gap-4 font-serif text-xl">
+                    {c.org}
+                    {c.years && <span className="shrink-0 font-sans text-sm text-muted">{c.years}</span>}
+                  </p>
                   <p className="mt-1 text-muted">{c.role}</p>
                 </li>
               ))}
