@@ -9,14 +9,13 @@ export const metadata: Metadata = {
   alternates: { canonical: "/about" },
 };
 
-// Add a "years" value to any role to show time spent, e.g. years: "6 years".
 const career: { org: string; role: string; years?: string }[] = [
-  { org: "Digital agency, New Zealand", role: "Brand Steward. Built the agency's AEO capability from the ground up." },
-  { org: "Health and wellness", role: "Marketing Manager, New Zealand, plus FMCG PR." },
-  { org: "Beauty and pharmaceuticals, Melbourne", role: "Brand and product management." },
+  { org: "Digital agency", role: "Strategy, content creation, AEO capability and search." },
+  { org: "Health and wellness and FMCG", role: "Marketing management, strategy and event management." },
+  { org: "Beauty and pharmaceuticals, Melbourne and Sydney", role: "Brand and product management." },
   { org: "Financial services", role: "Crisis communication management." },
   { org: "Prestige beauty and fragrance", role: "Brand management." },
-]
+];
 
 const credentials = [
   "Degree in Communications, majoring in Public Relations",
