@@ -21,9 +21,9 @@ export const featured: WorkItem = {
 
 export const work: WorkItem[] = [
   {
-    title: "Building an AEO practice from the ground up",
+    title: "Building AEO practice",
     context: "Digital agency, New Zealand and Australia",
-    body: "Built the agency's answer engine optimisation capability: the methodology, schema and entity optimisation, client audits, and a public 90-day experiment on its own AI visibility, documented week by week as a LinkedIn series.",
+    body: "Answer engine optimisation capability: the methodology, schema and entity optimisation, audits, and monthly reporting.",
     pillars: ["Noticed", "Indexed"],
     tags: ["AEO", "Schema", "Entity optimisation"],
     // TODO: confirm you're comfortable using this publicly reported figure.
