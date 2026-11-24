@@ -5,7 +5,7 @@ import { Container, CtaBand, PageHero, DotI } from "@/components/ui";
 export const metadata: Metadata = {
   title: "About Tineke Madgwick",
   description:
-    "Tineke Madgwick has around 20 years in brand, PR and digital marketing across health, beauty, financial services and luxury goods, and built an agency AEO practice from the ground up.",
+    "Tineke Madgwick has around 20 years in brand, PR and digital marketing across health, beauty, fragrance and financial services, and built an agency AEO practice from the ground up.",
   alternates: { canonical: "/about" },
 };
 
@@ -15,13 +15,13 @@ const career: { org: string; role: string; years?: string }[] = [
   { org: "Health and wellness", role: "Marketing Manager, New Zealand, plus FMCG PR." },
   { org: "Beauty and pharmaceuticals, Melbourne", role: "Brand and product management." },
   { org: "Financial services", role: "Crisis communication management." },
-  { org: "Luxury goods", role: "Business development." },
+  { org: "Prestige beauty and fragrance", role: "Brand management." },
 ]
 
 const credentials = [
   "Degree in Communications, majoring in Public Relations",
-  "Micro-credential: SEO Strategy (DMS502MC)",
-  "Micro-credential: AI in Marketing Practice (DMS507)",
+  "SEO Strategy (DMS502MC)",
+  "AI in Marketing Practice (DMS507)",
 ];
 
 export default function AboutPage() {
@@ -45,7 +45,7 @@ export default function AboutPage() {
             <p>
               I&apos;ve spent around 20 years in marketing, across brand management, product management, PR and
               digital strategy. I&apos;ve looked after household names in health, beauty and wellness, managed
-              communications through a crisis, and sold luxury goods. That breadth is why I care as much about the
+              communications through a crisis, and managed prestige beauty and fragrance brands. That breadth is why I care as much about the
               story a brand tells as the technical work behind it.
             </p>
             <p>
