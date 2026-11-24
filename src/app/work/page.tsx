@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 const capabilities = [
   { name: "AEO", note: "Getting brands cited and recommended by ChatGPT and Google's AI answers." },
   { name: "SEO", note: "Technical fixes, schema and content that help search engines understand you." },
-  { name: "Website builds", note: "Next.js, Shopify and HubSpot sites that are fast and easy to run." },
+  { name: "Website builds", note: "Fast, efficient website builds, without the high cost." },
   { name: "Strategy", note: "Positioning, messaging and a plan that joins the channels up." },
   { name: "Digital advertising", note: "Search and social campaigns aimed at the people who matter." },
   { name: "Content creation", note: "Blogs, landing pages, product copy and email that answer real questions." },
