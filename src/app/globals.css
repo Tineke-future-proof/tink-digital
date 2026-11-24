@@ -136,3 +136,17 @@ body {
 .bg-blue .ti::after {
   background: #fff;
 }
+
+/* No orphans: never leave a single word alone on the last line */
+h1,
+h2,
+h3 {
+  text-wrap-style: balance;
+}
+p,
+li,
+dd,
+dt,
+summary {
+  text-wrap-style: pretty;
+}
