@@ -105,7 +105,7 @@ export default function Home() {
               wrong, you&apos;re not in the conversation.
             </p>
             <p>
-              We&apos;ve spent the past year building AEO from the ground up and testing it in public. We bring that
+              We build AEO from the ground up and test it, so you show up where it matters. We bring that
               together with nearly two decades of brand, PR and digital marketing, so the technical work and the
               story you tell actually line up.
             </p>
