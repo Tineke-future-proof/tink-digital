@@ -26,8 +26,6 @@ export const work: WorkItem[] = [
     body: "Answer engine optimisation capability: the methodology, schema and entity optimisation, audits, and monthly reporting.",
     pillars: ["Noticed", "Indexed"],
     tags: ["AEO", "Schema", "Entity optimisation"],
-    // TODO: confirm you're comfortable using this publicly reported figure.
-    result: "Tracked AI visibility grew from 0.21% to 22.30% in 90 days.",
   },
   {
     title: "Moving an agency website off a hosted CMS",
