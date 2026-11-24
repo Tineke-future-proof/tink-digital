@@ -56,10 +56,6 @@ export default function AboutPage() {
               Tink Digital brings all of that together. You get senior, joined-up thinking without the agency
               layers, and someone who&apos;ll tell you plainly what&apos;s working and what isn&apos;t.
             </p>
-            <p>
-              I&apos;m based in Whangamatā on the Coromandel Peninsula and work with brands across New Zealand and
-              Australia. Locally, I&apos;m the guest judge at the Whangamatā Area School speech finals each year.
-            </p>
           </div>
           <div className="flex items-start justify-center rounded-3xl bg-white p-10">
             <Image
