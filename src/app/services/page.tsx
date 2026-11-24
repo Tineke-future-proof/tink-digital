@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Container, CtaBand, JsonLd, PageHero } from "@/components/ui";
+import { Container, CtaBand, JsonLd, PageHero, DotI } from "@/components/ui";
+import Doodle from "@/components/Doodle";
 import { faqs, pillars } from "@/content/services";
 import { site } from "@/lib/site";
 
@@ -34,10 +35,12 @@ export default function ServicesPage() {
   return (
     <>
       <PageHero
+        doodle="star"
+        note="four ways to be the obvious choice"
         eyebrow="Services"
         title={
           <>
-            Trusted. Indexed. Noticed. Known<span className="dot" />
+            Trusted. Indexed. Noticed. Known
           </>
         }
         intro="Everything I do is about one thing: making sure the right people find you, understand what you do, and choose you. Pick one area or bring them together."
@@ -52,7 +55,7 @@ export default function ServicesPage() {
           <Container className="grid gap-10 md:grid-cols-[0.8fr_1.2fr]">
             <div>
               <p className="font-serif text-8xl font-semibold text-blue">{p.letter}</p>
-              <h2 className="mt-4 text-4xl md:text-5xl">{p.word}</h2>
+              <h2 className="mt-4 text-4xl md:text-5xl"><DotI>{p.word}</DotI></h2>
               <p className="eyebrow mt-3 !tracking-[0.18em] text-muted">{p.title}</p>
             </div>
             <div>
@@ -60,7 +63,7 @@ export default function ServicesPage() {
               <ul className="mt-8 divide-y divide-rule border-y border-rule">
                 {p.services.map((s) => (
                   <li key={s} className="flex items-center gap-4 py-4">
-                    <span aria-hidden className="h-2 w-2 shrink-0 rounded-full bg-blue" />
+                    <Doodle name="check" className="h-5 w-5 shrink-0 text-blue" animate={false} />
                     {s}
                   </li>
                 ))}
@@ -72,7 +75,7 @@ export default function ServicesPage() {
 
       <section className="py-16 md:py-24">
         <Container className="grid gap-10 md:grid-cols-[0.8fr_1.2fr]">
-          <h2 className="text-4xl md:text-5xl">Common questions</h2>
+          <h2 className="text-4xl md:text-5xl"><DotI>Common questions</DotI></h2>
           <div className="divide-y divide-rule border-y border-rule">
             {faqs.map((f) => (
               <details key={f.q} className="group py-5">

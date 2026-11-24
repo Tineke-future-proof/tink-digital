@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Container, CtaBand, PageHero } from "@/components/ui";
+import { Container, CtaBand, PageHero, DotI } from "@/components/ui";
 
 export const metadata: Metadata = {
   title: "About Tineke Madgwick",
@@ -27,10 +27,12 @@ export default function AboutPage() {
   return (
     <>
       <PageHero
+        doodle="bubble"
+        note="kia ora!"
         eyebrow="About"
         title={
           <>
-            Hi, I&apos;m Tineke<span className="dot" />
+            Hi, I&apos;m Tineke
           </>
         }
         intro="I help brands get found, understood and chosen, online and in the real world."
@@ -73,7 +75,7 @@ export default function AboutPage() {
       <section className="border-t border-rule bg-white py-16 md:py-24">
         <Container className="grid gap-14 md:grid-cols-2">
           <div>
-            <h2 className="text-3xl md:text-4xl">Where I&apos;ve worked</h2>
+            <h2 className="text-3xl md:text-4xl"><DotI>Where I&apos;ve worked</DotI></h2>
             <ul className="mt-8 divide-y divide-rule border-y border-rule">
               {career.map((c) => (
                 <li key={c.org} className="py-5">
@@ -84,7 +86,7 @@ export default function AboutPage() {
             </ul>
           </div>
           <div>
-            <h2 className="text-3xl md:text-4xl">Qualifications</h2>
+            <h2 className="text-3xl md:text-4xl"><DotI>Qualifications</DotI></h2>
             <ul className="mt-8 divide-y divide-rule border-y border-rule">
               {credentials.map((c) => (
                 <li key={c} className="flex items-center gap-4 py-5">

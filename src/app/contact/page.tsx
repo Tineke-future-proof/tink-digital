@@ -18,10 +18,12 @@ export default function ContactPage() {
   return (
     <>
       <PageHero
+        doodle="arrowDown"
+        note="go on, say hi"
         eyebrow="Contact"
         title={
           <>
-            Let&apos;s talk<span className="dot" />
+            Let&apos;s talk
           </>
         }
         intro="Tell me a bit about your business and what you'd like to change. I'll come back to you with honest thoughts on where to start, whether or not we end up working together."

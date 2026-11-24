@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ButtonLink, Container, PageHero } from "@/components/ui";
+import { ButtonLink, Container, PageHero, DotI } from "@/components/ui";
 import { posts } from "@/content/posts";
 
 export const metadata: Metadata = {
@@ -13,10 +13,12 @@ export default function BlogPage() {
   return (
     <>
       <PageHero
+        doodle="hatch"
+        note="fresh thinking, coming soon"
         eyebrow="Insights"
         title={
           <>
-            Notes on getting found<span className="dot" />
+            Notes on getting found
           </>
         }
         intro="Practical thinking on AEO, SEO, AI search and digital marketing, written for busy business owners."
@@ -25,7 +27,7 @@ export default function BlogPage() {
         <Container>
           {posts.length === 0 ? (
             <div className="rounded-3xl border border-dashed border-rule bg-white p-10 md:p-14">
-              <h2 className="text-3xl">First posts are on their way.</h2>
+              <h2 className="text-3xl"><DotI>First posts are on their way.</DotI></h2>
               <p className="mt-4 max-w-xl text-muted">
                 In the meantime, follow along on LinkedIn, or get in touch if there&apos;s a question you&apos;d like
                 answered.
@@ -39,11 +41,11 @@ export default function BlogPage() {
               {posts.map((p) => (
                 <li key={p.slug} className="py-8">
                   <p className="text-sm text-muted">{p.date}</p>
-                  <h2 className="mt-2 text-3xl">
+                  <h2 className="mt-2 text-3xl"><DotI>
                     <Link href={`/blog/${p.slug}`} className="hover:text-blue">
                       {p.title}
                     </Link>
-                  </h2>
+                  </DotI></h2>
                   <p className="mt-3 max-w-2xl text-muted">{p.excerpt}</p>
                 </li>
               ))}

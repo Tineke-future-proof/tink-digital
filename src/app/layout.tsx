@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { JsonLd } from "@/components/ui";
+import { PencilDefs } from "@/components/Doodle";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -73,6 +74,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en-NZ" className="h-full antialiased">
       <body className="flex min-h-full flex-col">
+        <PencilDefs />
         <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-50 focus:rounded focus:bg-white focus:px-4 focus:py-2">
           Skip to content
         </a>

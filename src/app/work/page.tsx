@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Container, CtaBand, PageHero } from "@/components/ui";
+import { Container, CtaBand, PageHero, DotI } from "@/components/ui";
 import { featured, work, type WorkItem } from "@/content/work";
 
 export const metadata: Metadata = {
@@ -40,10 +40,12 @@ export default function WorkPage() {
   return (
     <>
       <PageHero
+        doodle="spiral"
+        note="a few things I have made"
         eyebrow="Work"
         title={
           <>
-            Helping brands be seen and known online<span className="dot" />
+            Helping brands be seen and known online
           </>
         }
         intro="Whether it's AEO, SEO, a new website, strategy, digital advertising or content, the goal is the same: make it easy for the right people to find you and choose you."
@@ -54,10 +56,9 @@ export default function WorkPage() {
           <div className="grid gap-px overflow-hidden rounded-3xl border border-rule bg-rule sm:grid-cols-2 lg:grid-cols-3">
             {capabilities.map((c) => (
               <div key={c.name} className="bg-paper p-8">
-                <h2 className="text-2xl">
+                <h2 className="text-2xl"><DotI>
                   {c.name}
-                  <span className="dot" />
-                </h2>
+                </DotI></h2>
                 <p className="mt-3 text-muted">{c.note}</p>
               </div>
             ))}
@@ -69,7 +70,7 @@ export default function WorkPage() {
         <Container className="grid items-center gap-10 md:grid-cols-2">
           <div>
             <p className="eyebrow text-lavender">Featured project</p>
-            <h2 className="mt-4 text-4xl md:text-5xl">{featured.title}</h2>
+            <h2 className="mt-4 text-4xl md:text-5xl"><DotI>{featured.title}</DotI></h2>
             <p className="mt-2 text-white/60">{featured.context}</p>
           </div>
           <div>
@@ -81,7 +82,7 @@ export default function WorkPage() {
 
       <section className="py-16 md:py-24">
         <Container>
-          <h2 className="max-w-3xl text-4xl md:text-5xl">Agency and client work</h2>
+          <h2 className="max-w-3xl text-4xl md:text-5xl"><DotI>Agency and client work</DotI></h2>
           <p className="mt-5 max-w-2xl text-lg text-muted">
             Most of my recent work was delivered as part of an agency team, so client names stay private. Here&apos;s
             the kind of work I lead.

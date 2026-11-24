@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "@fontsource-variable/fraunces/opsz.css";
 @import "@fontsource-variable/inter";
+@import "@fontsource/caveat/600.css";
 
 @theme {
   --color-ink: #0a0a0f;
@@ -12,6 +13,8 @@
   --color-muted: #55556a;
   --font-serif: "Fraunces Variable", Georgia, serif;
   --font-sans: "Inter Variable", system-ui, sans-serif;
+  --font-hand: "Caveat", "Comic Sans MS", cursive;
+  --color-graphite: #4a4a58;
 }
 
 html {
@@ -63,4 +66,48 @@ button:focus-visible {
 
 .prose-tink p + p {
   margin-top: 1rem;
+}
+
+body {
+  overflow-x: clip;
+}
+
+/* Pencil doodles draw themselves in once */
+.doodle-draw {
+  stroke-dasharray: 1400;
+  stroke-dashoffset: 1400;
+  animation: doodle-draw 2.2s ease-out forwards;
+}
+
+@keyframes doodle-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .doodle-draw {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Brand tittle: a blue dot above every lowercase i in headings, like the logo */
+.ti {
+  position: relative;
+  display: inline-block;
+}
+.ti::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0.07em;
+  width: 0.2em;
+  height: 0.2em;
+  border-radius: 9999px;
+  background: var(--color-blue);
+  transform: translateX(-50%);
+}
+.bg-blue .ti::after {
+  background: #fff;
 }

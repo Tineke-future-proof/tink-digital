@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { ButtonLink, Container, CtaBand, Eyebrow } from "@/components/ui";
+import { ButtonLink, Container, CtaBand, Eyebrow, DotI } from "@/components/ui";
+import Doodle, { Note } from "@/components/Doodle";
 import { pillars } from "@/content/services";
 import { featured, work } from "@/content/work";
 
@@ -16,11 +17,23 @@ export default function Home() {
       {/* Hero */}
       <section className="relative overflow-hidden border-b border-rule">
         <div aria-hidden className="absolute -top-20 -right-20 h-40 w-40 rounded-full bg-blue md:-top-24 md:-right-24 md:h-[28rem] md:w-[28rem]" />
+        <Doodle name="spiral" className="absolute top-1/2 left-4 hidden h-24 w-24 -translate-y-1/2 text-graphite 2xl:block" />
+        <div className="absolute top-80 right-10 hidden w-56 text-graphite lg:block md:top-[29rem]">
+          <Doodle name="arrow" className="h-20 w-28 -scale-x-100 rotate-[-20deg]" />
+          <Note className="mt-1 -rotate-3">psst... AI reads this too</Note>
+        </div>
         <Container className="relative py-20 md:py-32">
-          <Eyebrow>Trusted • Indexed • Noticed • Known</Eyebrow>
-          <h1 className="mt-6 max-w-4xl text-5xl md:text-[5.5rem]">
-            Get found, understood and chosen<span className="dot" />
-          </h1>
+          <div className="flex items-center gap-3">
+            <Eyebrow>Trusted • Indexed • Noticed • Known</Eyebrow>
+            <Doodle name="sparkle" className="h-6 w-6 text-blue" strokeWidth={2} />
+          </div>
+          <h1 className="mt-6 max-w-4xl text-5xl md:text-[5.5rem]"><DotI>
+            Get found, understood and{" "}
+            <span className="relative inline-block">
+              chosen
+              <Doodle name="underline" className="absolute -bottom-3 left-0 h-4 w-full text-blue md:-bottom-5 md:h-6" strokeWidth={3.5} />
+            </span>
+          </DotI></h1>
           <p className="mt-8 max-w-2xl text-lg text-muted md:text-xl">
             I help brands show up where people are looking, on Google and in AI answers, and in the real world.
             AEO, SEO, website builds, strategy, digital advertising and content, joined up.
@@ -39,13 +52,25 @@ export default function Home() {
         <Container>
           <div className="max-w-2xl">
             <Eyebrow>What I do</Eyebrow>
-            <h2 className="mt-4 text-4xl md:text-5xl">Four things every brand needs to be</h2>
+            <h2 className="mt-4 text-4xl md:text-5xl"><DotI>
+              <span className="relative inline-block">
+                Four
+                <Doodle name="circle" className="absolute -inset-x-6 -inset-y-4 h-[calc(100%+2rem)] w-[calc(100%+3rem)] text-blue" />
+              </span>{" "}
+              things every brand needs to be
+            </DotI></h2>
             <p className="mt-5 text-lg text-muted">
               Tink stands for what I help you become. Each one builds on the last, and together they make you the
               obvious choice.
             </p>
           </div>
-          <div className="mt-14 grid gap-px overflow-hidden rounded-3xl border border-rule bg-rule md:grid-cols-2">
+          <div className="relative mt-14">
+          <div className="absolute -top-16 right-6 hidden items-end gap-2 text-graphite lg:flex">
+            <Note className="-rotate-2">pick one, or all four</Note>
+            <Doodle name="arrowDown" className="h-20 w-12" />
+          </div>
+          <Doodle name="star" className="absolute -bottom-8 -left-8 hidden h-16 w-16 text-blue lg:block" />
+          <div className="grid gap-px overflow-hidden rounded-3xl border border-rule bg-rule md:grid-cols-2">
             {pillars.map((p) => (
               <Link
                 key={p.slug}
@@ -59,15 +84,19 @@ export default function Home() {
               </Link>
             ))}
           </div>
+          </div>
         </Container>
       </section>
 
       {/* Why */}
-      <section className="bg-ink py-20 text-white md:py-28">
+      <section className="relative bg-ink py-20 text-white md:py-28">
+        <Doodle name="loops" className="absolute top-10 right-8 hidden h-10 w-40 text-lavender lg:block" />
+        <Doodle name="hatch" className="absolute bottom-10 left-6 hidden h-16 w-16 text-white/30 xl:block" />
         <Container className="grid gap-14 md:grid-cols-2">
           <div>
             <p className="eyebrow text-lavender">Why it matters now</p>
-            <h2 className="mt-4 text-4xl md:text-5xl">Search has changed. Most marketing hasn&apos;t caught up.</h2>
+            <h2 className="mt-4 text-4xl md:text-5xl"><DotI>Search has changed. Most marketing hasn&apos;t caught up.</DotI></h2>
+            <Note className="mt-6 -rotate-2 text-lavender">the bit most marketing skips</Note>
           </div>
           <div className="space-y-5 text-lg text-white/80">
             <p>
@@ -87,7 +116,10 @@ export default function Home() {
       {/* Proof */}
       <section className="py-20 md:py-28">
         <Container>
-          <Eyebrow>Selected work</Eyebrow>
+          <div className="flex items-center gap-3">
+            <Eyebrow>Selected work</Eyebrow>
+            <Doodle name="squiggle" className="h-5 w-12 text-blue" />
+          </div>
           <div className="mt-8 grid gap-6 md:grid-cols-2">
             {[agencyAeo, featured].map((item) => (
               <article key={item.title} className="flex flex-col rounded-3xl border border-rule bg-white p-8 md:p-10">
@@ -103,17 +135,24 @@ export default function Home() {
               </article>
             ))}
           </div>
-          <div className="mt-10">
+          <div className="mt-10 flex items-center gap-4">
             <ButtonLink href="/work" variant="secondary">
               See more work
             </ButtonLink>
+            <div className="hidden items-center gap-2 text-graphite sm:flex">
+              <Doodle name="arrow" className="h-10 w-16 -scale-x-100 rotate-[10deg]" />
+              <Note className="rotate-2">more this way</Note>
+            </div>
           </div>
 
           <dl className="mt-20 grid gap-8 border-t border-rule pt-10 md:grid-cols-3">
             {proofPoints.map((p) => (
               <div key={p.label}>
                 <dt className="eyebrow text-muted">{p.label}</dt>
-                <dd className="mt-3 font-serif text-2xl">{p.value}</dd>
+                <dd className="mt-3 flex items-start gap-2 font-serif text-2xl">
+                  <Doodle name="check" className="mt-1 h-6 w-6 shrink-0 text-blue" />
+                  {p.value}
+                </dd>
               </div>
             ))}
           </dl>
