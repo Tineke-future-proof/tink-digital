@@ -8,7 +8,7 @@ export const site = {
   positioning: "I help brands get found, understood and chosen, online and in the real world.",
   description:
     "Tink Digital helps New Zealand and Australian brands get found, understood and chosen across Google and AI search, through AEO, SEO, website builds, strategy, digital advertising and content.",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://tink-digital.vercel.app",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.tinkdigital.co",
   // TODO: replace with your new Tink Digital email once the domain is set up.
   email: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "",
   phone: "021 804 603",
