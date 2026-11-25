@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Container, CtaBand, PageHero, DotI } from "@/components/ui";
-import { featured, upcoming, work, type WorkItem } from "@/content/work";
+import { featured, work, type WorkItem } from "@/content/work";
 
 export const metadata: Metadata = {
   title: "Work: helping brands be seen and known online",
@@ -66,9 +66,9 @@ export default function WorkPage() {
 
       <section className="bg-ink py-16 text-white md:py-24">
         <Container>
-          <p className="eyebrow text-lavender">Featured projects</p>
+          <p className="eyebrow text-lavender">Featured project</p>
           <div className="mt-8 divide-y divide-rule-dark border-y border-rule-dark">
-            {[featured, upcoming].map((item) => (
+            {[featured].map((item) => (
               <div key={item.title} className="grid items-center gap-8 py-10 md:grid-cols-2">
                 <div>
                   <h2 className="text-4xl md:text-5xl">
@@ -78,7 +78,18 @@ export default function WorkPage() {
                 </div>
                 <div>
                   <p className="text-lg text-white/80">{item.body}</p>
-                  <p className="mt-6 inline-flex rounded-full bg-blue px-4 py-1.5 text-sm font-semibold">{item.status}</p>
+                  {item.link ? (
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener"
+                      className="mt-6 inline-flex rounded-full bg-blue px-4 py-1.5 text-sm font-semibold hover:bg-white hover:text-ink"
+                    >
+                      {item.status} ↗
+                    </a>
+                  ) : (
+                    <p className="mt-6 inline-flex rounded-full bg-blue px-4 py-1.5 text-sm font-semibold">{item.status}</p>
+                  )}
                 </div>
               </div>
             ))}

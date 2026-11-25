@@ -127,11 +127,21 @@ export default function Home() {
                 <h3 className="mt-3 text-2xl md:text-3xl">{item.title}</h3>
                 <p className="mt-4 text-muted">{item.body}</p>
                 {item.result && <p className="mt-6 font-serif text-xl text-blue">{item.result}</p>}
-                {item.status && (
-                  <p className="mt-6 inline-flex w-fit rounded-full bg-paper px-3 py-1 text-sm font-semibold text-blue">
-                    {item.status}
-                  </p>
-                )}
+                {item.status &&
+                  (item.link ? (
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener"
+                      className="mt-6 inline-flex w-fit rounded-full bg-paper px-3 py-1 text-sm font-semibold text-blue hover:bg-blue hover:text-white"
+                    >
+                      {item.status} ↗
+                    </a>
+                  ) : (
+                    <p className="mt-6 inline-flex w-fit rounded-full bg-paper px-3 py-1 text-sm font-semibold text-blue">
+                      {item.status}
+                    </p>
+                  ))}
               </article>
             ))}
           </div>

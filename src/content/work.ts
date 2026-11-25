@@ -8,6 +8,7 @@ export type WorkItem = {
   tags: string[];
   result?: string;
   status?: string;
+  link?: string;
 };
 
 export const featured: WorkItem = {
@@ -16,16 +17,18 @@ export const featured: WorkItem = {
   body: "A new website for a local Muay Thai gym, built in just a week, with supporting social posts and a content calendar.",
   pillars: ["Indexed", "Known"],
   tags: ["Website build", "Local SEO", "Schema"],
-  status: "Launching soon",
+  status: "Visit the live site",
+  link: "https://www.diamondthaiwhanga.co",
 };
 
-// Placeholder: update the description once the project is under way.
+// Hidden for now (not shown on the site). Webb Design & Build is a content and visibility engagement,
+// not a website build: rewrite this before showing it again.
 export const upcoming: WorkItem = {
   title: "Webb Design & Build",
   context: "Design and build, Whangamatā",
-  body: "A new website for a licensed design-and-build firm creating quality beach homes. More details coming soon.",
-  pillars: ["Indexed", "Known"],
-  tags: ["Website build"],
+  body: "Content creation and visibility for a licensed design-and-build firm creating quality beach homes.",
+  pillars: ["Noticed", "Known"],
+  tags: ["Content", "Visibility"],
   status: "Coming soon",
 };
 
